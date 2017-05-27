@@ -96,6 +96,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             }
             
             let marker = GMSMarker(position: coordinate)
+            marker.icon = UIImage(named: "pinblue")
             marker.userData = poi
             marker.isTappable = true
             marker.title = poi.stationName
