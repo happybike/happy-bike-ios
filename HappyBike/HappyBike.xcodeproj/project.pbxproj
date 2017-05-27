@@ -16,6 +16,8 @@
 		2E5F401B1ED8DDBC00330CB0 /* HappyBikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F401A1ED8DDBC00330CB0 /* HappyBikeUITests.swift */; };
 		2E5F40291ED9591700330CB0 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F40281ED9591700330CB0 /* WelcomeScreenViewController.swift */; };
 		2E5F402B1ED9649A00330CB0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F402A1ED9649A00330CB0 /* MapViewController.swift */; };
+		2E5F40331ED9775000330CB0 /* VeloTMAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F40321ED9775000330CB0 /* VeloTMAPI.swift */; };
+		2E5F40351ED9796000330CB0 /* VeloTMPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F40341ED9796000330CB0 /* VeloTMPOI.swift */; };
 		6D97B6993218B40BF85B626A /* Pods_HappyBikeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2EEAC5EC97344E4332C418 /* Pods_HappyBikeTests.framework */; };
 		C6069184B5B33011DBA55216 /* Pods_HappyBikeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489012185920F4343A4EE236 /* Pods_HappyBikeUITests.framework */; };
 		DD6CF3645B8403C865240E16 /* Pods_HappyBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9447B7C62F49B61E6E705EF /* Pods_HappyBike.framework */; };
@@ -57,6 +59,8 @@
 		2E5F401C1ED8DDBC00330CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E5F40281ED9591700330CB0 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		2E5F402A1ED9649A00330CB0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2E5F40321ED9775000330CB0 /* VeloTMAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VeloTMAPI.swift; sourceTree = "<group>"; };
+		2E5F40341ED9796000330CB0 /* VeloTMPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VeloTMPOI.swift; sourceTree = "<group>"; };
 		45761523941D4E0FDF81C174 /* Pods-HappyBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBike.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBike/Pods-HappyBike.release.xcconfig"; sourceTree = "<group>"; };
 		489012185920F4343A4EE236 /* Pods_HappyBikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyBikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70516728BF29562564CE288D /* Pods-HappyBikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBikeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBikeTests/Pods-HappyBikeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 		2E5F3FF91ED8DDBC00330CB0 /* HappyBike */ = {
 			isa = PBXGroup;
 			children = (
+				2E5F40301ED9769100330CB0 /* API */,
+				2E5F40311ED9769100330CB0 /* Models */,
 				2E5F3FFA1ED8DDBC00330CB0 /* AppDelegate.swift */,
 				2E5F3FFC1ED8DDBC00330CB0 /* ViewController.swift */,
 				2E5F40281ED9591700330CB0 /* WelcomeScreenViewController.swift */,
@@ -146,6 +152,22 @@
 				2E5F401C1ED8DDBC00330CB0 /* Info.plist */,
 			);
 			path = HappyBikeUITests;
+			sourceTree = "<group>";
+		};
+		2E5F40301ED9769100330CB0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2E5F40321ED9775000330CB0 /* VeloTMAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2E5F40311ED9769100330CB0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E5F40341ED9796000330CB0 /* VeloTMPOI.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2FEF8A05F8C0B2143E61D548 /* Pods */ = {
@@ -453,6 +475,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E5F40331ED9775000330CB0 /* VeloTMAPI.swift in Sources */,
+				2E5F40351ED9796000330CB0 /* VeloTMPOI.swift in Sources */,
 				2E5F3FFD1ED8DDBC00330CB0 /* ViewController.swift in Sources */,
 				2E5F3FFB1ED8DDBC00330CB0 /* AppDelegate.swift in Sources */,
 				2E5F40291ED9591700330CB0 /* WelcomeScreenViewController.swift in Sources */,
