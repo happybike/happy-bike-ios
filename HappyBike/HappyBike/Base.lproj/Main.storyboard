@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xbN-Fk-oDZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,6 +26,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-751" y="-1496"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="5zP-Ps-FaT">
+            <objects>
+                <viewController id="xbN-Fk-oDZ" customClass="MapViewController" customModule="HappyBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jxY-3z-B4Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="CDJ-dN-sOL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wwK-sg-Hld">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqf-Cg-EV5" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uqf-Cg-EV5" firstAttribute="leading" secondItem="wwK-sg-Hld" secondAttribute="leading" id="8m5-oP-Ej6"/>
+                            <constraint firstItem="CDJ-dN-sOL" firstAttribute="top" secondItem="uqf-Cg-EV5" secondAttribute="bottom" id="HWe-Tk-PFs"/>
+                            <constraint firstAttribute="trailing" secondItem="uqf-Cg-EV5" secondAttribute="trailing" id="NTQ-uW-uq7"/>
+                            <constraint firstItem="uqf-Cg-EV5" firstAttribute="top" secondItem="jxY-3z-B4Z" secondAttribute="bottom" constant="20" id="eLa-2K-tUc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="uqf-Cg-EV5" id="h6M-Up-gRb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCU-en-Hpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1599" y="-803"/>
         </scene>
         <!--Welcome Screen View Controller-->
         <scene sceneID="ra8-f2-2rd">
