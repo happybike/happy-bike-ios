@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RCU-en-Hpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2489" y="-1496"/>
+            <point key="canvasLocation" x="-2436" y="-1496"/>
         </scene>
         <!--Welcome Screen View Controller-->
         <scene sceneID="ra8-f2-2rd">
