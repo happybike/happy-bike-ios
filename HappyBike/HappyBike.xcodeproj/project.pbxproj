@@ -14,6 +14,9 @@
 		2E5F40051ED8DDBC00330CB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F40031ED8DDBC00330CB0 /* LaunchScreen.storyboard */; };
 		2E5F40101ED8DDBC00330CB0 /* HappyBikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F400F1ED8DDBC00330CB0 /* HappyBikeTests.swift */; };
 		2E5F401B1ED8DDBC00330CB0 /* HappyBikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F401A1ED8DDBC00330CB0 /* HappyBikeUITests.swift */; };
+		6D97B6993218B40BF85B626A /* Pods_HappyBikeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2EEAC5EC97344E4332C418 /* Pods_HappyBikeTests.framework */; };
+		C6069184B5B33011DBA55216 /* Pods_HappyBikeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489012185920F4343A4EE236 /* Pods_HappyBikeUITests.framework */; };
+		DD6CF3645B8403C865240E16 /* Pods_HappyBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9447B7C62F49B61E6E705EF /* Pods_HappyBike.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C2EEAC5EC97344E4332C418 /* Pods_HappyBikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyBikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15EF38751A0C4FD140898613 /* Pods-HappyBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBike/Pods-HappyBike.debug.xcconfig"; sourceTree = "<group>"; };
+		1A02F10584261288C50DA810 /* Pods-HappyBikeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBikeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBikeUITests/Pods-HappyBikeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2E5F3FF71ED8DDBC00330CB0 /* HappyBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F3FFA1ED8DDBC00330CB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E5F3FFC1ED8DDBC00330CB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		2E5F40161ED8DDBC00330CB0 /* HappyBikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyBikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F401A1ED8DDBC00330CB0 /* HappyBikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyBikeUITests.swift; sourceTree = "<group>"; };
 		2E5F401C1ED8DDBC00330CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45761523941D4E0FDF81C174 /* Pods-HappyBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBike.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBike/Pods-HappyBike.release.xcconfig"; sourceTree = "<group>"; };
+		489012185920F4343A4EE236 /* Pods_HappyBikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyBikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70516728BF29562564CE288D /* Pods-HappyBikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBikeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBikeTests/Pods-HappyBikeTests.release.xcconfig"; sourceTree = "<group>"; };
+		8EFA0C0DC427D2EA3392FAFD /* Pods-HappyBikeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBikeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBikeUITests/Pods-HappyBikeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		924434D84F24AB783F740C25 /* Pods-HappyBikeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBikeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBikeTests/Pods-HappyBikeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C9447B7C62F49B61E6E705EF /* Pods_HappyBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6CF3645B8403C865240E16 /* Pods_HappyBike.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D97B6993218B40BF85B626A /* Pods_HappyBikeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6069184B5B33011DBA55216 /* Pods_HappyBikeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				2E5F400E1ED8DDBC00330CB0 /* HappyBikeTests */,
 				2E5F40191ED8DDBC00330CB0 /* HappyBikeUITests */,
 				2E5F3FF81ED8DDBC00330CB0 /* Products */,
+				2FEF8A05F8C0B2143E61D548 /* Pods */,
+				B953A5613EE8C66A6F222705 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = HappyBikeUITests;
 			sourceTree = "<group>";
 		};
+		2FEF8A05F8C0B2143E61D548 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15EF38751A0C4FD140898613 /* Pods-HappyBike.debug.xcconfig */,
+				45761523941D4E0FDF81C174 /* Pods-HappyBike.release.xcconfig */,
+				924434D84F24AB783F740C25 /* Pods-HappyBikeTests.debug.xcconfig */,
+				70516728BF29562564CE288D /* Pods-HappyBikeTests.release.xcconfig */,
+				8EFA0C0DC427D2EA3392FAFD /* Pods-HappyBikeUITests.debug.xcconfig */,
+				1A02F10584261288C50DA810 /* Pods-HappyBikeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B953A5613EE8C66A6F222705 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9447B7C62F49B61E6E705EF /* Pods_HappyBike.framework */,
+				0C2EEAC5EC97344E4332C418 /* Pods_HappyBikeTests.framework */,
+				489012185920F4343A4EE236 /* Pods_HappyBikeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E5F401F1ED8DDBC00330CB0 /* Build configuration list for PBXNativeTarget "HappyBike" */;
 			buildPhases = (
+				20B94F4195BE213D3B5FF446 /* [CP] Check Pods Manifest.lock */,
 				2E5F3FF31ED8DDBC00330CB0 /* Sources */,
 				2E5F3FF41ED8DDBC00330CB0 /* Frameworks */,
 				2E5F3FF51ED8DDBC00330CB0 /* Resources */,
+				49D3F8FE4B0C308B8D98C0FE /* [CP] Embed Pods Frameworks */,
+				9F611D0510E181D56469CAAC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E5F40221ED8DDBC00330CB0 /* Build configuration list for PBXNativeTarget "HappyBikeTests" */;
 			buildPhases = (
+				640BE90AB1EA6CAC6E9379CB /* [CP] Check Pods Manifest.lock */,
 				2E5F40071ED8DDBC00330CB0 /* Sources */,
 				2E5F40081ED8DDBC00330CB0 /* Frameworks */,
 				2E5F40091ED8DDBC00330CB0 /* Resources */,
+				218E563B182DC7FA061FAB41 /* [CP] Embed Pods Frameworks */,
+				237179D35E246789D1179933 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E5F40251ED8DDBC00330CB0 /* Build configuration list for PBXNativeTarget "HappyBikeUITests" */;
 			buildPhases = (
+				19F9DF1BB923B106A430572C /* [CP] Check Pods Manifest.lock */,
 				2E5F40121ED8DDBC00330CB0 /* Sources */,
 				2E5F40131ED8DDBC00330CB0 /* Frameworks */,
 				2E5F40141ED8DDBC00330CB0 /* Resources */,
+				1D750C2617FA086EC803099F /* [CP] Embed Pods Frameworks */,
+				6583A2377CFD14F44064288D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +303,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19F9DF1BB923B106A430572C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1D750C2617FA086EC803099F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyBikeUITests/Pods-HappyBikeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20B94F4195BE213D3B5FF446 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		218E563B182DC7FA061FAB41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyBikeTests/Pods-HappyBikeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		237179D35E246789D1179933 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyBikeTests/Pods-HappyBikeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49D3F8FE4B0C308B8D98C0FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyBike/Pods-HappyBike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		640BE90AB1EA6CAC6E9379CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6583A2377CFD14F44064288D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyBikeUITests/Pods-HappyBikeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F611D0510E181D56469CAAC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyBike/Pods-HappyBike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E5F3FF31ED8DDBC00330CB0 /* Sources */ = {
@@ -413,6 +600,7 @@
 		};
 		2E5F40201ED8DDBC00330CB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15EF38751A0C4FD140898613 /* Pods-HappyBike.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Norbert Nagy (7WCJ2JD2RZ)";
@@ -429,6 +617,7 @@
 		};
 		2E5F40211ED8DDBC00330CB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45761523941D4E0FDF81C174 /* Pods-HappyBike.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -443,6 +632,7 @@
 		};
 		2E5F40231ED8DDBC00330CB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 924434D84F24AB783F740C25 /* Pods-HappyBikeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -457,6 +647,7 @@
 		};
 		2E5F40241ED8DDBC00330CB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70516728BF29562564CE288D /* Pods-HappyBikeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +662,7 @@
 		};
 		2E5F40261ED8DDBC00330CB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EFA0C0DC427D2EA3392FAFD /* Pods-HappyBikeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = HappyBikeUITests/Info.plist;
@@ -484,6 +676,7 @@
 		};
 		2E5F40271ED8DDBC00330CB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A02F10584261288C50DA810 /* Pods-HappyBikeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = HappyBikeUITests/Info.plist;
