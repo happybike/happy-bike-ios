@@ -14,6 +14,7 @@
 		2E5F40051ED8DDBC00330CB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F40031ED8DDBC00330CB0 /* LaunchScreen.storyboard */; };
 		2E5F40101ED8DDBC00330CB0 /* HappyBikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F400F1ED8DDBC00330CB0 /* HappyBikeTests.swift */; };
 		2E5F401B1ED8DDBC00330CB0 /* HappyBikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F401A1ED8DDBC00330CB0 /* HappyBikeUITests.swift */; };
+		2E5F40291ED9591700330CB0 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F40281ED9591700330CB0 /* WelcomeScreenViewController.swift */; };
 		6D97B6993218B40BF85B626A /* Pods_HappyBikeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2EEAC5EC97344E4332C418 /* Pods_HappyBikeTests.framework */; };
 		C6069184B5B33011DBA55216 /* Pods_HappyBikeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489012185920F4343A4EE236 /* Pods_HappyBikeUITests.framework */; };
 		DD6CF3645B8403C865240E16 /* Pods_HappyBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9447B7C62F49B61E6E705EF /* Pods_HappyBike.framework */; };
@@ -53,6 +54,7 @@
 		2E5F40161ED8DDBC00330CB0 /* HappyBikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyBikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F401A1ED8DDBC00330CB0 /* HappyBikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyBikeUITests.swift; sourceTree = "<group>"; };
 		2E5F401C1ED8DDBC00330CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E5F40281ED9591700330CB0 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		45761523941D4E0FDF81C174 /* Pods-HappyBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBike.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBike/Pods-HappyBike.release.xcconfig"; sourceTree = "<group>"; };
 		489012185920F4343A4EE236 /* Pods_HappyBikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyBikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70516728BF29562564CE288D /* Pods-HappyBikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBikeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBikeTests/Pods-HappyBikeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				2E5F3FFA1ED8DDBC00330CB0 /* AppDelegate.swift */,
 				2E5F3FFC1ED8DDBC00330CB0 /* ViewController.swift */,
+				2E5F40281ED9591700330CB0 /* WelcomeScreenViewController.swift */,
 				2E5F3FFE1ED8DDBC00330CB0 /* Main.storyboard */,
 				2E5F40011ED8DDBC00330CB0 /* Assets.xcassets */,
 				2E5F40031ED8DDBC00330CB0 /* LaunchScreen.storyboard */,
@@ -449,6 +452,7 @@
 			files = (
 				2E5F3FFD1ED8DDBC00330CB0 /* ViewController.swift in Sources */,
 				2E5F3FFB1ED8DDBC00330CB0 /* AppDelegate.swift in Sources */,
+				2E5F40291ED9591700330CB0 /* WelcomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +711,7 @@
 				2E5F40211ED8DDBC00330CB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E5F40221ED8DDBC00330CB0 /* Build configuration list for PBXNativeTarget "HappyBikeTests" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +720,7 @@
 				2E5F40241ED8DDBC00330CB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E5F40251ED8DDBC00330CB0 /* Build configuration list for PBXNativeTarget "HappyBikeUITests" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +729,7 @@
 				2E5F40271ED8DDBC00330CB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
