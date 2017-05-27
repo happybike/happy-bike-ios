@@ -24,6 +24,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     var locationManager = CLLocationManager()
     
     var slideMenuItems = [SlideMenuItem]()
+    var selectedSlideMenuItemIndexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +57,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     }
     
     private func createSlideMenu() {
-        addMaskGradient(leftSlideMenuMask)
-        addMaskGradient(rightSlideMenuMask)
+//        addMaskGradient(leftSlideMenuMask)
+//        addMaskGradient(rightSlideMenuMask)
+        leftSlideMenuMask.isHidden = true
+        rightSlideMenuMask.isHidden = true
         
         slideMenuItems = [SlideMenuItem(title: "VELOTM"), SlideMenuItem(title: "SAFE SPOTS"), SlideMenuItem(title: "BIKE REPAIR"), SlideMenuItem(title: "BIKE SHOP"), SlideMenuItem(title: "BIKE SHOP1"), SlideMenuItem(title: "BIKE SHOP2"), SlideMenuItem(title: "BIKE SHOP3"), SlideMenuItem(title: "BIKE SHOP4")]
         collectionView.register(UINib(nibName: "SlideMenuCell", bundle: nil), forCellWithReuseIdentifier: "SlideMenuCell")
@@ -101,6 +104,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             }
             marker.map = mapView
         }
+        
+        collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .top)
+        let cell = collectionView.cellForItem(at: IndexPath(item: 0, section: 0)) as! SlideMenuCell
+        cell.selectCell(true)
+        selectedSlideMenuItemIndexPath = IndexPath(item: 0, section: 0)
     }
     
     private func drawRoute(_ coords: [CLLocationCoordinate2D]) {
@@ -164,8 +172,13 @@ extension MapViewController: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
+        let cell = collectionView.cellForItem(at: indexPath) as! SlideMenuCell
         let selection = slideMenuItems[indexPath.row]
         
+        cell.selectCell(true)
+        
+        let previousCell = collectionView.cellForItem(at: selectedSlideMenuItemIndexPath!) as! SlideMenuCell
+        previousCell.selectCell(false)
+        selectedSlideMenuItemIndexPath = indexPath
     }
 }

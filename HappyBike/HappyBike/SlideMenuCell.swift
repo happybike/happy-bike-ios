@@ -17,7 +17,14 @@ class SlideMenuCell: UICollectionViewCell {
         
         label.textColor = UIColor.white
         contentView.layer.cornerRadius = 5
-        contentView.backgroundColor = UIColor.blue//UIColor(hex: "")
+        contentView.backgroundColor = UIColor.gray
     }
-
+    
+    func selectCell(_ selected: Bool) {
+        if selected {
+            contentView.backgroundColor = UIColor.blue//UIColor(hex: "")
+        } else {
+            contentView.backgroundColor = UIColor.gray//UIColor(hex: "")
+        }
+    }
 }
