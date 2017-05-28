@@ -49,7 +49,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         
         mapView.delegate = self
         
-        let camera = GMSCameraPosition.camera(withLatitude: 45.761218, longitude: 21.209991, zoom: 15)
+        let camera = GMSCameraPosition.camera(withLatitude: 45.759348, longitude: 21.220091, zoom: 16)
         mapView.camera = camera
         
         mapView.settings.compassButton = true
@@ -70,6 +70,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             strongSelf.velotmpois = pois
             strongSelf.showVeloPois(strongSelf.velotmpois)
         }
+        
+        showBikeLanes([])
     }
     
     private func createSlideMenu() {
@@ -163,8 +165,44 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         
     }
     
-    private func showBikeLanes(_ lanes: [Any]) {
+    func showBikeLanes(_ lanes: [Any]) {
+//        guard let url = Bundle.main.url(forResource: "pistebici", withExtension: "kml") else {
+//            return
+//        }
+//        
+//        KMLDocument.parse(url) { [unowned self] (document) in
+//            print(document)
+//        }
+        let coords = [
+            CLLocationCoordinate2D(latitude: 45.761218, longitude: 21.209991),
+            CLLocationCoordinate2D(latitude: 45.761997, longitude: 21.210378),
+            CLLocationCoordinate2D(latitude: 45.762903, longitude: 21.210796),
+            CLLocationCoordinate2D(latitude: 45.762708, longitude: 21.211343),
+            CLLocationCoordinate2D(latitude: 45.760380, longitude: 21.217309),
+            CLLocationCoordinate2D(latitude: 45.759968, longitude: 21.218124),
+            CLLocationCoordinate2D(latitude: 45.759362, longitude: 21.217877)
+        ]
+        let path = GMSMutablePath()
+        let _ = coords.map({path.add($0)})
         
+        let polyline = GMSPolyline(path: path)
+        polyline.strokeColor = UIColor.green
+        polyline.strokeWidth = 4
+//        polyline.spans = [GMSStyleSpan(color: UIColor.green),GMSStyleSpan(color: UIColor.green),GMSStyleSpan(color: UIColor.green),GMSStyleSpan(color: UIColor.green),GMSStyleSpan(color: UIColor.red),GMSStyleSpan(color: UIColor.yellow)]
+        polyline.map = mapView
+        
+        let coords2 = [
+            CLLocationCoordinate2D(latitude: 45.763127, longitude: 21.211073),
+            CLLocationCoordinate2D(latitude: 45.762963, longitude: 21.211556),
+            CLLocationCoordinate2D(latitude: 45.760328, longitude: 21.218197),
+        ]
+        let path2 = GMSMutablePath()
+        let _ = coords2.map({path2.add($0)})
+        
+        let polyline2 = GMSPolyline(path: path2)
+        polyline2.strokeColor = UIColor.green
+        polyline2.strokeWidth = 4
+        polyline2.map = mapView
     }
     
     private func drawRoute(_ coords: [CLLocationCoordinate2D]) {
@@ -277,6 +315,8 @@ extension MapViewController: UICollectionViewDelegate, UICollectionViewDataSourc
             previousCell.selectCell(false)
             mapView.clear()
             addMarker(selection.type)
+            
+            showBikeLanes([])
         }
         
         selectedSlideMenuItemIndexPath = indexPath
