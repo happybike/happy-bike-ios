@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>473000610945-nl809ee6clvu1nct9cla69nodnng4gsj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.473000610945-nl809ee6clvu1nct9cla69nodnng4gsj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBPaXRkiA3N4ru4yeL6RN_2WILCZC5VDHI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>473000610945</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hacktm.app</string>
+	<key>PROJECT_ID</key>
+	<string>happybike-3c4ff</string>
+	<key>STORAGE_BUCKET</key>
+	<string>happybike-3c4ff.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:473000610945:ios:851e2d815a11f4df</string>
+	<key>DATABASE_URL</key>
+	<string>https://happybike-3c4ff.firebaseio.com</string>
+</dict>
+</plist>

@@ -23,6 +23,7 @@
 		2E5F40401ED9F69500330CB0 /* SlideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F403E1ED9F69500330CB0 /* SlideMenuCell.xib */; };
 		2E89CCA31EDA034900EAFC12 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E89CCA21EDA034800EAFC12 /* Extensions.swift */; };
 		2E89CCA51EDA134100EAFC12 /* CollectionMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E89CCA41EDA134100EAFC12 /* CollectionMaskView.swift */; };
+		2E89CCA71EDAAD3A00EAFC12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E89CCA61EDAAD3A00EAFC12 /* GoogleService-Info.plist */; };
 		6D97B6993218B40BF85B626A /* Pods_HappyBikeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2EEAC5EC97344E4332C418 /* Pods_HappyBikeTests.framework */; };
 		C6069184B5B33011DBA55216 /* Pods_HappyBikeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489012185920F4343A4EE236 /* Pods_HappyBikeUITests.framework */; };
 		DD6CF3645B8403C865240E16 /* Pods_HappyBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9447B7C62F49B61E6E705EF /* Pods_HappyBike.framework */; };
@@ -71,6 +72,7 @@
 		2E5F403E1ED9F69500330CB0 /* SlideMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideMenuCell.xib; sourceTree = "<group>"; };
 		2E89CCA21EDA034800EAFC12 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2E89CCA41EDA134100EAFC12 /* CollectionMaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionMaskView.swift; sourceTree = "<group>"; };
+		2E89CCA61EDAAD3A00EAFC12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45761523941D4E0FDF81C174 /* Pods-HappyBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBike.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBike/Pods-HappyBike.release.xcconfig"; sourceTree = "<group>"; };
 		489012185920F4343A4EE236 /* Pods_HappyBikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyBikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70516728BF29562564CE288D /* Pods-HappyBikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBikeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBikeTests/Pods-HappyBikeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				2E5F40011ED8DDBC00330CB0 /* Assets.xcassets */,
 				2E5F40031ED8DDBC00330CB0 /* LaunchScreen.storyboard */,
 				2E5F40061ED8DDBC00330CB0 /* Info.plist */,
+				2E89CCA61EDAAD3A00EAFC12 /* GoogleService-Info.plist */,
 			);
 			path = HappyBike;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			files = (
 				2E5F40401ED9F69500330CB0 /* SlideMenuCell.xib in Resources */,
 				2E5F40051ED8DDBC00330CB0 /* LaunchScreen.storyboard in Resources */,
+				2E89CCA71EDAAD3A00EAFC12 /* GoogleService-Info.plist in Resources */,
 				2E5F40021ED8DDBC00330CB0 /* Assets.xcassets in Resources */,
 				2E5F40001ED8DDBC00330CB0 /* Main.storyboard in Resources */,
 			);
