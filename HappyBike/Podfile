@@ -10,6 +10,7 @@ target 'HappyBike' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
   target 'HappyBikeTests' do
     inherit! :search_paths
