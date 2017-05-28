@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 
 enum SlideMenuType {
-    case VeloTM, SafeSpot, Repair, Shop
+    case VeloTM, SafeSpot, Repair, Shop, Places
 }
 
 struct SlideMenuItem {
@@ -34,11 +34,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     var safeSpotpois = [Any]()
     var repairpois = [Any]()
     var shoppois = [Any]()
+    var placespois = [Any]()
     
     var veloMarkers = [GMSMarker]()
     var safeSpotMarkers = [GMSMarker]()
     var repairMarkers = [GMSMarker]()
     var shopMarkers = [GMSMarker]()
+    var placesMarkers = [GMSMarker]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +78,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         leftSlideMenuMask.isHidden = true
         rightSlideMenuMask.isHidden = true
         
-        slideMenuItems = [SlideMenuItem(title: "VELOTM", type: .VeloTM), SlideMenuItem(title: "SAFE SPOTS", type: .SafeSpot), SlideMenuItem(title: "BIKE REPAIR", type: .Repair), SlideMenuItem(title: "BIKE SHOP", type: .Shop), SlideMenuItem(title: "BIKE SHOP1", type: .Shop), SlideMenuItem(title: "BIKE SHOP2", type: .Shop), SlideMenuItem(title: "BIKE SHOP3", type: .Shop), SlideMenuItem(title: "BIKE SHOP4", type: .Shop)]
+        slideMenuItems = [SlideMenuItem(title: "VELOTM", type: .VeloTM), SlideMenuItem(title: "PLACES", type: .Places), SlideMenuItem(title: "SAFE SPOTS", type: .SafeSpot), SlideMenuItem(title: "BIKE REPAIR", type: .Repair), SlideMenuItem(title: "BIKE SHOP", type: .Shop), SlideMenuItem(title: "BIKE SHOP1", type: .Shop), SlideMenuItem(title: "BIKE SHOP2", type: .Shop), SlideMenuItem(title: "BIKE SHOP3", type: .Shop), SlideMenuItem(title: "BIKE SHOP4", type: .Shop)]
         collectionView.register(UINib(nibName: "SlideMenuCell", bundle: nil), forCellWithReuseIdentifier: "SlideMenuCell")
         if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 100, height: 40)
@@ -133,6 +135,26 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         
     }
     
+    private func showPlaces(_ places: [Any]) {
+        guard let url = Bundle.main.url(forResource: "places_to_visit", withExtension: "kml") else {
+            return
+        }
+        
+        KMLDocument.parse(url) { [unowned self] (document) in
+            for poi in document.annotations {
+                let marker = GMSMarker(position: poi.coordinate)
+                marker.icon = UIImage(named: "pinyellow")
+                marker.userData = poi
+                marker.isTappable = true
+                marker.title = poi.title
+//                marker.snippet = poi.subtitle
+                marker.map = self.mapView
+                
+                self.placesMarkers.append(marker)
+            }
+        }
+    }
+    
     private func showSafeSpots(_ safeSpots: [Any]) {
         
     }
@@ -180,6 +202,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             showSafeSpots(safeSpotpois)
         case .Shop:
             showShops(shoppois)
+        case .Places:
+            showPlaces(placespois)
+            
         }
     }
 

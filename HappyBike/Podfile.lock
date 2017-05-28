@@ -1,4 +1,5 @@
 PODS:
+  - AEXML (4.1.0)
   - Alamofire (4.4.0)
   - Firebase/Core (3.16.0):
     - FirebaseAnalytics (= 3.8.0)
@@ -26,15 +27,19 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
+  - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
+  - AEXML
   - Alamofire (~> 4.4)
   - Firebase/Core
   - Firebase/Database
   - GoogleMaps
   - GooglePlaces
+  - UIColor_Hex_Swift (~> 3.0.2)
 
 SPEC CHECKSUMS:
+  AEXML: 647fbb051280f3fb38a1a7caa62b0344055a851c
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Firebase: 21bf4a89d3f01bfbe11adc3a5d934a4a3d3a5fd6
   FirebaseAnalytics: 920e46455f27b0a52a80907a6d9b73ee4bd1c635
@@ -44,7 +49,8 @@ SPEC CHECKSUMS:
   GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
   GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: f21b8321eef58a0e6e0f9fdd2d274f577fbb1d20
+PODFILE CHECKSUM: b64d1885b979131496a12a2688b1f5701137404a
 
 COCOAPODS: 1.2.1

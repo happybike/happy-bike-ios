@@ -11,6 +11,8 @@ target 'HappyBike' do
   pod 'GooglePlaces'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'AEXML'
+  pod 'UIColor_Hex_Swift', '~> 3.0.2'
 
   target 'HappyBikeTests' do
     inherit! :search_paths
