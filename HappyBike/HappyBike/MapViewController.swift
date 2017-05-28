@@ -9,8 +9,13 @@
 import UIKit
 import GoogleMaps
 
+enum SlideMenuType {
+    case VeloTM, SafeSpot, Repair, Shop
+}
+
 struct SlideMenuItem {
     var title: String
+    var type: SlideMenuType
 }
 
 class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
@@ -20,11 +25,20 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     @IBOutlet weak var leftSlideMenuMask: CollectionMaskView!
     @IBOutlet weak var rightSlideMenuMask: CollectionMaskView!
     
-    var velotmpois = [VeloTMPOI]()
     var locationManager = CLLocationManager()
     
     var slideMenuItems = [SlideMenuItem]()
     var selectedSlideMenuItemIndexPath: IndexPath?
+    
+    var velotmpois = [VeloTMPOI]()
+    var safeSpotpois = [Any]()
+    var repairpois = [Any]()
+    var shoppois = [Any]()
+    
+    var veloMarkers = [GMSMarker]()
+    var safeSpotMarkers = [GMSMarker]()
+    var repairMarkers = [GMSMarker]()
+    var shopMarkers = [GMSMarker]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +66,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             }
             
             strongSelf.velotmpois = pois
-            strongSelf.showPois(strongSelf.velotmpois)
+            strongSelf.showVeloPois(strongSelf.velotmpois)
         }
     }
     
@@ -62,7 +76,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         leftSlideMenuMask.isHidden = true
         rightSlideMenuMask.isHidden = true
         
-        slideMenuItems = [SlideMenuItem(title: "VELOTM"), SlideMenuItem(title: "SAFE SPOTS"), SlideMenuItem(title: "BIKE REPAIR"), SlideMenuItem(title: "BIKE SHOP"), SlideMenuItem(title: "BIKE SHOP1"), SlideMenuItem(title: "BIKE SHOP2"), SlideMenuItem(title: "BIKE SHOP3"), SlideMenuItem(title: "BIKE SHOP4")]
+        slideMenuItems = [SlideMenuItem(title: "VELOTM", type: .VeloTM), SlideMenuItem(title: "SAFE SPOTS", type: .SafeSpot), SlideMenuItem(title: "BIKE REPAIR", type: .Repair), SlideMenuItem(title: "BIKE SHOP", type: .Shop), SlideMenuItem(title: "BIKE SHOP1", type: .Shop), SlideMenuItem(title: "BIKE SHOP2", type: .Shop), SlideMenuItem(title: "BIKE SHOP3", type: .Shop), SlideMenuItem(title: "BIKE SHOP4", type: .Shop)]
         collectionView.register(UINib(nibName: "SlideMenuCell", bundle: nil), forCellWithReuseIdentifier: "SlideMenuCell")
         if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 100, height: 40)
@@ -89,7 +103,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         locationManager.startUpdatingLocation()
     }
     
-    private func showPois(_ pois: [VeloTMPOI]) {
+    private func showVeloPois(_ pois: [VeloTMPOI]) {
+        veloMarkers.removeAll()
         for poi in pois {
             guard let coordinate = poi.coordinate, CLLocationCoordinate2DIsValid(coordinate) else {
                 return
@@ -104,6 +119,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
                 marker.snippet = "\(occupied)" + "/" + "\(max)"
             }
             marker.map = mapView
+            
+            veloMarkers.append(marker)
         }
         
         collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .top)
@@ -112,8 +129,58 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         selectedSlideMenuItemIndexPath = IndexPath(item: 0, section: 0)
     }
     
+    private func showRepair(_ services: [Any]) {
+        
+    }
+    
+    private func showSafeSpots(_ safeSpots: [Any]) {
+        
+    }
+    
+    private func showShops(_ shops: [Any]) {
+        
+    }
+    
+    private func showBikeLanes(_ lanes: [Any]) {
+        
+    }
+    
     private func drawRoute(_ coords: [CLLocationCoordinate2D]) {
         
+    }
+    
+    // MARK: - 
+    
+    func removeMarker(_ type: SlideMenuType) {
+//        let arr: [GMSMarker]
+//        switch type {
+//        case .VeloTM:
+//            arr = veloMarkers
+//        case .Repair:
+//            arr = repairMarkers
+//        case .SafeSpot:
+//            arr = safeSpotMarkers
+//        case .Shop:
+//            arr = shopMarkers
+//        }
+//        
+//        for marker in arr {
+//            marker.map = nil
+//        }
+        mapView.clear()
+    }
+    
+    func addMarker(_ type: SlideMenuType) {
+        switch type {
+        case .VeloTM:
+            showVeloPois(velotmpois)
+        case .Repair:
+            showRepair(repairpois)
+        case .SafeSpot:
+            showSafeSpots(safeSpotpois)
+        case .Shop:
+            showShops(shoppois)
+        }
     }
 
     // MARK: GMSMapViewDelegate
@@ -176,10 +243,17 @@ extension MapViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         let cell = collectionView.cellForItem(at: indexPath) as! SlideMenuCell
         let selection = slideMenuItems[indexPath.row]
         
-        cell.selectCell(true)
+        if selectedSlideMenuItemIndexPath?.row == indexPath.row {
+//            cell.selectCell(false)
+//            removeMarker(selection.type)
+        } else {
+            cell.selectCell(true)
+            let previousCell = collectionView.cellForItem(at: selectedSlideMenuItemIndexPath!) as! SlideMenuCell
+            previousCell.selectCell(false)
+            mapView.clear()
+            addMarker(selection.type)
+        }
         
-        let previousCell = collectionView.cellForItem(at: selectedSlideMenuItemIndexPath!) as! SlideMenuCell
-        previousCell.selectCell(false)
         selectedSlideMenuItemIndexPath = indexPath
     }
 }
