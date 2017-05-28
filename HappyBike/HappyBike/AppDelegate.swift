@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         GMSServices.provideAPIKey("AIzaSyC-viDxpMnQ-FzaaTWb6upeab1tfF2NXuE")
         FIRApp.configure()
+        FIRDatabase.database().reference()
+//        ref.child("db-alerts").observeSingleEvent(of: .value, with: { snapshot in
+//            
+//        })
         return true
     }
 
