@@ -69,7 +69,7 @@
         <!--Scan-->
         <scene sceneID="RFF-Wo-Z0H">
             <objects>
-                <viewController id="VRm-oG-hmp" sceneMemberID="viewController">
+                <viewController id="VRm-oG-hmp" customClass="ScanViewController" customModule="HappyBike" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pE2-qg-i5P"/>
                         <viewControllerLayoutGuide type="bottom" id="2Fb-Cl-fJW"/>
@@ -77,13 +77,37 @@
                     <view key="view" contentMode="scaleToFill" id="dab-5u-eOA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NpV-cb-eV8">
+                                <rect key="frame" x="20" y="70" width="335" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="fai-ck-FqR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZh-wZ-OMf">
+                                <rect key="frame" x="20" y="32" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="VRm-oG-hmp" eventType="touchUpInside" id="piK-oG-rW5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NpV-cb-eV8" firstAttribute="top" secondItem="pE2-qg-i5P" secondAttribute="bottom" constant="50" id="bZ0-8W-O7h"/>
+                            <constraint firstItem="NpV-cb-eV8" firstAttribute="leading" secondItem="dab-5u-eOA" secondAttribute="leading" constant="20" id="eld-MT-Hbf"/>
+                            <constraint firstAttribute="trailing" secondItem="NpV-cb-eV8" secondAttribute="trailing" constant="20" id="ksN-42-kyZ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scan" image="ic_camera_alt_24px" id="tph-N0-5HD"/>
+                    <connections>
+                        <outlet property="imageView" destination="NpV-cb-eV8" id="ebK-5O-T2t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXc-jQ-Vkj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4262" y="-134"/>
+            <point key="canvasLocation" x="-4263.1999999999998" y="-134.48275862068968"/>
         </scene>
         <!--Add-->
         <scene sceneID="PrR-TH-rUm">
