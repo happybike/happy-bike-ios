@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2A84311EDC16CF000C0A69 /* PolylineAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A84301EDC16CF000C0A69 /* PolylineAnimator.swift */; };
+		2E2A84331EDC59B8000C0A69 /* GGAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A84321EDC59B8000C0A69 /* GGAPI.swift */; };
 		2E5F3FFB1ED8DDBC00330CB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F3FFA1ED8DDBC00330CB0 /* AppDelegate.swift */; };
 		2E5F3FFD1ED8DDBC00330CB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F3FFC1ED8DDBC00330CB0 /* ViewController.swift */; };
 		2E5F40001ED8DDBC00330CB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F3FFE1ED8DDBC00330CB0 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		0C2EEAC5EC97344E4332C418 /* Pods_HappyBikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyBikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EF38751A0C4FD140898613 /* Pods-HappyBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBike/Pods-HappyBike.debug.xcconfig"; sourceTree = "<group>"; };
 		1A02F10584261288C50DA810 /* Pods-HappyBikeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBikeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBikeUITests/Pods-HappyBikeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2E2A84301EDC16CF000C0A69 /* PolylineAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolylineAnimator.swift; sourceTree = "<group>"; };
+		2E2A84321EDC59B8000C0A69 /* GGAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GGAPI.swift; sourceTree = "<group>"; };
 		2E5F3FF71ED8DDBC00330CB0 /* HappyBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F3FFA1ED8DDBC00330CB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E5F3FFC1ED8DDBC00330CB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				2E89CCA41EDA134100EAFC12 /* CollectionMaskView.swift */,
 				2E89CCA21EDA034800EAFC12 /* Extensions.swift */,
 				2E89CCA81EDAB7D400EAFC12 /* KML.swift */,
+				2E2A84301EDC16CF000C0A69 /* PolylineAnimator.swift */,
 				2E5F3FFE1ED8DDBC00330CB0 /* Main.storyboard */,
 				2E5F403E1ED9F69500330CB0 /* SlideMenuCell.xib */,
 				2E5F40011ED8DDBC00330CB0 /* Assets.xcassets */,
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				2E5F40321ED9775000330CB0 /* VeloTMAPI.swift */,
+				2E2A84321EDC59B8000C0A69 /* GGAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -526,10 +532,12 @@
 				2E5F40351ED9796000330CB0 /* VeloTMPOI.swift in Sources */,
 				2E89CCA91EDAB7D400EAFC12 /* KML.swift in Sources */,
 				2E89CCB21EDAD48600EAFC12 /* ScanViewController.swift in Sources */,
+				2E2A84311EDC16CF000C0A69 /* PolylineAnimator.swift in Sources */,
 				2E5F3FFD1ED8DDBC00330CB0 /* ViewController.swift in Sources */,
 				2E89CCA31EDA034900EAFC12 /* Extensions.swift in Sources */,
 				2E89CCA51EDA134100EAFC12 /* CollectionMaskView.swift in Sources */,
 				2E5F403F1ED9F69500330CB0 /* SlideMenuCell.swift in Sources */,
+				2E2A84331EDC59B8000C0A69 /* GGAPI.swift in Sources */,
 				2E5F3FFB1ED8DDBC00330CB0 /* AppDelegate.swift in Sources */,
 				2E5F40291ED9591700330CB0 /* WelcomeScreenViewController.swift in Sources */,
 				2E5F402B1ED9649A00330CB0 /* MapViewController.swift in Sources */,

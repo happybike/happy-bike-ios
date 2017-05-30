@@ -42,6 +42,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     var shopMarkers = [GMSMarker]()
     var placesMarkers = [GMSMarker]()
     
+    var directionPolyline: GMSPolyline?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -256,7 +258,27 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         //let poi = marker.userData
+        guard let start = mapView.myLocation else {
+            print("no user location")
+            return
+        }
+        let end = CLLocation(latitude: marker.position.latitude, longitude: marker.position.longitude)
         
+        self.directionPolyline?.map = nil
+        
+        GGAPI().pathBetweenCoordinate(start, second: end) { [weak self] (encodedPath) in
+            guard let strongSelf = self else {return}
+            guard let encodedPath = encodedPath,
+                let path = GMSPath(fromEncodedPath: encodedPath) else {
+                    print("path from encoded path error")
+                    return
+            }
+            
+            let polyline = GMSPolyline(path: path)
+            polyline.strokeWidth = 4
+            polyline.map = strongSelf.mapView
+            strongSelf.directionPolyline = polyline//.copy() as? GMSPolyline
+        }
     }
     
     // MARK: CLLocationManagerDelegate
@@ -310,8 +332,13 @@ extension MapViewController: UICollectionViewDelegate, UICollectionViewDataSourc
 //            cell.selectCell(false)
 //            removeMarker(selection.type)
         } else {
+            guard let previousIndexPath = selectedSlideMenuItemIndexPath else {
+                print("no previous index path")
+                return
+            }
+            
             cell.selectCell(true)
-            let previousCell = collectionView.cellForItem(at: selectedSlideMenuItemIndexPath!) as! SlideMenuCell
+            let previousCell = collectionView.cellForItem(at: previousIndexPath) as! SlideMenuCell
             previousCell.selectCell(false)
             mapView.clear()
             addMarker(selection.type)
