@@ -274,10 +274,18 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
                     return
             }
             
-            let polyline = GMSPolyline(path: path)
-            polyline.strokeWidth = 4
-            polyline.map = strongSelf.mapView
-            strongSelf.directionPolyline = polyline//.copy() as? GMSPolyline
+//            let polyline = GMSPolyline(path: path)
+//            polyline.strokeWidth = 4
+//            polyline.map = strongSelf.mapView
+//            strongSelf.directionPolyline = polyline//.copy() as? GMSPolyline
+            
+            PolylineAnimator().animatePath(path, onMap: strongSelf.mapView, completion: { [weak strongSelf] (finished) in
+                let polyline = GMSPolyline(path: path)
+                polyline.strokeColor = UIColor.blue
+                polyline.strokeWidth = 4
+                polyline.map = strongSelf?.mapView
+                strongSelf?.directionPolyline = polyline
+            })
         }
     }
     
