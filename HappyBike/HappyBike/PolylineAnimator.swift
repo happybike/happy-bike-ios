@@ -39,7 +39,7 @@ class PolylineAnimator {
             if self.animationIndex < path.count() {
                 self.animationPath.add(path.coordinate(at: self.animationIndex))
                 let polyline = GMSPolyline(path: self.animationPath)
-                polyline.strokeColor = UIColor.blue
+                polyline.strokeColor = UIColor(red: 0.0/255.0, green: 102.0/255.0, blue: 204.0/255.0, alpha: 1.0)
                 polyline.strokeWidth = 4
                 polyline.map = ggMap
                 self.animationPolylines.append(polyline)

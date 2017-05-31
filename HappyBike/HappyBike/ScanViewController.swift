@@ -11,8 +11,11 @@ import UIKit
 class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "happybike"
     }
     
     @IBAction func takePhoto(_ sender: Any) {

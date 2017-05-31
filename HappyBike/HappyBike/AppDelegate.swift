@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        ref.child("db-alerts").observeSingleEvent(of: .value, with: { snapshot in
 //            
 //        })
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         return true
     }
 

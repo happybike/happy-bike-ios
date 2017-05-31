@@ -47,6 +47,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "happybike"
+        
+        automaticallyAdjustsScrollViewInsets = false
+        
         createSlideMenu()
         
         mapView.delegate = self
@@ -281,7 +285,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             
             PolylineAnimator().animatePath(path, onMap: strongSelf.mapView, completion: { [weak strongSelf] (finished) in
                 let polyline = GMSPolyline(path: path)
-                polyline.strokeColor = UIColor.blue
+                polyline.strokeColor = UIColor(red: 0.0/255.0, green: 102.0/255.0, blue: 204.0/255.0, alpha: 1.0)
                 polyline.strokeWidth = 4
                 polyline.map = strongSelf?.mapView
                 strongSelf?.directionPolyline = polyline

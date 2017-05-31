@@ -12,7 +12,7 @@ import Alamofire
 
 class GGAPI {
 //    static let directionUrl = "https://maps.googleapis.com/maps/api/directions/json?origin=45.756779,21.216809&destination=45.757969,21.224781&sensor=false&mode=walking&key=AIzaSyDZTZ_5dTg8hZuSWE56R_XMCQ33P6Xume0"
-    private static let directionUrl = "https://maps.googleapis.com/maps/api/directions/json?origin=%f,%f&destination=%f,%f&sensor=false&mode=walking&key=AIzaSyDZTZ_5dTg8hZuSWE56R_XMCQ33P6Xume0"
+    private static let directionUrl = "https://maps.googleapis.com/maps/api/directions/json?origin=%f,%f&destination=%f,%f&sensor=false&mode=walking"
     
     func pathBetweenCoordinate(_ first: CLLocation, second: CLLocation, completion: @escaping (String?) -> Void) {
         let url = String(format: GGAPI.directionUrl, first.coordinate.latitude, first.coordinate.longitude, second.coordinate.latitude, second.coordinate.longitude)
